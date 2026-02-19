@@ -1,0 +1,90 @@
+body{
+    background-color: #1C1C1C;
+    font-family: "Karla", sans-serif;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+
+.app-body{
+    background-color: #1F2937;
+    height: 550px;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    padding: 115px 52px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+h1 span{
+    display: block;
+    color: #10B981;
+}
+.header-group{
+    margin-bottom: 51px;
+}
+
+p{
+    color: gray;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.version-text{
+    font-size: 10px;
+}
+
+button{
+    width: 191px;
+    padding: 9px 15px;
+    border-radius: 6px;
+    
+    border: none;
+    color: white;
+    margin-bottom: 35px;
+
+    background-color: #10B981;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    background-color: #0f9266;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+button:active{
+    background-color: #096a4a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0) scale(0.96);
+}
+
+.pass-area{
+    padding: 35px 0;
+    border-top: 1px solid #2F3E53;
+    display: flex;
+    gap: 24px;
+
+}
+
+.pass-el{
+    background-color: #273549;
+    color:#10B981;
+    flex-basis: 50%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 9px 15px
+}
