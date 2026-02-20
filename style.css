@@ -26,6 +26,12 @@ h1{
     margin-bottom: 10px;
 }
 
+h2{
+    font-family: "Limelight", sans-serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.301);
+}
+
 h1 span{
     display: block;
     color: #10B981;
@@ -42,6 +48,7 @@ p{
 
 .version-text{
     font-size: 10px;
+    text-align: center;
 }
 
 button{
@@ -77,6 +84,7 @@ button:active{
     border-top: 1px solid #2F3E53;
     display: flex;
     gap: 24px;
+    
 
 }
 
@@ -86,5 +94,6 @@ button:active{
     flex-basis: 50%;
     text-align: center;
     border-radius: 6px;
-    padding: 9px 15px
+    padding: 9px 15px;
+    height: 39px;
 }
