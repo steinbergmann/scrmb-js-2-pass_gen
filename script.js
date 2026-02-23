@@ -5,10 +5,11 @@ const genBtn = document.getElementById('gen-btn')
 const passElLeft = document.getElementById('pass-el-left')
 const passElRight = document.getElementById('pass-el-right')
 
-function startApp(){
+genBtn.addEventListener("click", function(){
     renderPassword(passElLeft)
     renderPassword(passElRight)
-}
+})
+
 
 function renderPassword(targetEl){
     let pass = ""
