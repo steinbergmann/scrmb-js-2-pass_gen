@@ -4,19 +4,44 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const genBtn = document.getElementById('gen-btn')
 const passElLeft = document.getElementById('pass-el-left')
 const passElRight = document.getElementById('pass-el-right')
+const passLengthEl = document.getElementById('pass-length-el')
 
-genBtn.addEventListener("click", function(){
+passLengthEl.addEventListener("input", () => lengthControl())
+
+genBtn.addEventListener("click", () => {
     renderPassword(passElLeft)
     renderPassword(passElRight)
 })
 
 
+
 function renderPassword(targetEl){
+    
+    
+    if (passLengthEl.value < 6){
+        passLengthEl.value = 6
+    }
+
+    const length = Number(passLengthEl.value)
+
     let pass = ""
-    for(let i = 0; i < 15; i++){
+
+    
+    for(let i = 0; i < length; i++){
         let randNum = Math.floor(Math.random() * characters.length)
         pass += characters[randNum]
     }
     
     targetEl.textContent = pass
+}
+
+
+function lengthControl(){
+    let length = Number(passLengthEl.value)
+
+    if (length > 32){
+        passLengthEl.value = 32
+    } else if (length < 0){
+        passLengthEl.value = 0
+    } 
 }

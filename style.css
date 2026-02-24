@@ -9,7 +9,7 @@ body{
 
 .app-body{
     background-color: #1F2937;
-    height: 550px;
+    /* height: 550px; */
     aspect-ratio: 1/1;
     margin: 0 auto;
     padding: 115px 52px;
@@ -19,6 +19,8 @@ body{
     justify-content: center;
 }
 
+/* TYPOGRAPHY */
+
 h1{
     font-weight: bolder;
     font-size: 40px;
@@ -26,30 +28,47 @@ h1{
     margin-bottom: 10px;
 }
 
-h2{
+h1 span{
+    display: block;
+    color: #10B981;
+}
+
+#logo{
     font-family: "Limelight", sans-serif;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.301);
 }
 
-h1 span{
-    display: block;
-    color: #10B981;
-}
-.header-group{
-    margin-bottom: 51px;
+h2{
+    margin-bottom: 10px;
 }
 
-p{
+#header-subtitle{
     color: gray;
     font-size: 24px;
     font-weight: 200;
 }
 
+p{
+    color: gray;
+
+}
+
 .version-text{
-    font-size: 10px;
+    font-size: 16px;
     text-align: center;
 }
+
+
+/* LAYOUT */
+
+.group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 51px;
+}
+
+
 
 button{
     width: 191px;
@@ -83,17 +102,21 @@ button:active{
     padding: 35px 0;
     border-top: 1px solid #2F3E53;
     display: flex;
+    flex-direction: column;
     gap: 24px;
-    
-
 }
 
-.pass-el{
+.pass-el, #pass-length-el{
     background-color: #273549;
     color:#10B981;
     flex-basis: 50%;
     text-align: center;
     border-radius: 6px;
     padding: 9px 15px;
-    height: 39px;
+    min-height: 39px;
+}
+#pass-length-el{
+    border: none;
+    width: 100%;
+    color: white;
 }
