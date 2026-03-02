@@ -1,60 +1,95 @@
-body{
-    background-color: #1C1C1C;
-    font-family: "Karla", sans-serif;
-    height: 500px;
-    display: flex;
-    align-items: center;
+:root{
+    --background-color: #1C1C1C;
+    --background-app: #1F2937;
+    --text-color: #fff;
+    --button-text:#fff;
+    --text-secondary: #808080;
+    --main-secondary: #2F3E53;
+    --accent-color:  #10B981;
+    --accent-color-active: #096a4a;
+    --accent-color-hover: #0f9266;
+
 }
 
 
-.app-body{
-    background-color: #1F2937;
-    /* height: 550px; */
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-    padding: 115px 52px;
-    color: white;
+.light-theme {
+    --background-color: #d6d6d6;
+    --background-app: #ECFDF5;
+    --text-color:#3a3a3a;
+    --main-secondary: #808080b7;
+}
+
+
+
+body {
+    background-color: var(--background-color);
+    font-family: "Karla", sans-serif;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center
+}
+
+
+.app-body {
+    background-color: var(--background-app);
+    height: 850px;
+    width: 500px;
+    aspect-ratio: 1/1;
+    padding: 115px 52px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px -5px black;
+
 }
 
 /* TYPOGRAPHY */
 
-h1{
+h1 {
     font-weight: bolder;
     font-size: 40px;
     line-height: 1;
     margin-bottom: 10px;
 }
 
-h1 span{
+h1 span {
     display: block;
-    color: #10B981;
+    color: var(--accent-color);
 }
 
-#logo{
+#logo {
     font-family: "Limelight", sans-serif;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.301);
+    color: var(--text-secondary);
 }
 
-h2{
+h2 {
     margin-bottom: 10px;
 }
 
-#header-subtitle{
-    color: gray;
+#header-subtitle {
+    color: var(--text-secondary);
     font-size: 24px;
     font-weight: 200;
 }
 
-p{
-    color: gray;
+p {
+    color: var(--text-secondary);
 
 }
 
-.version-text{
+.version-text {
     font-size: 16px;
     text-align: center;
 }
@@ -62,7 +97,7 @@ p{
 
 /* LAYOUT */
 
-.group{
+.group {
     display: flex;
     flex-direction: column;
     margin-bottom: 51px;
@@ -70,53 +105,94 @@ p{
 
 
 
-button{
+button {
     width: 191px;
-    padding: 9px 15px;
+    min-height: 45px;
     border-radius: 6px;
-    
+
     border: none;
-    color: white;
+    color: var(--button-text);
     margin-bottom: 35px;
 
-    background-color: #10B981;
+    background-color: var(--accent-color);
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     transition: all 0.2s ease;
 }
 
-button:hover{
-    background-color: #0f9266;
+button:hover {
+    background-color: var(--accent-color-hover);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
-button:active{
-    background-color: #096a4a;
+button:active {
+    background-color: var(--accent-color-active);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(0) scale(0.96);
 }
 
-.pass-area{
+.pass-area {
     padding: 35px 0;
-    border-top: 1px solid #2F3E53;
+    border-top: 1px solid var(--main-secondary);
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.pass-el, #pass-length-el{
-    background-color: #273549;
-    color:#10B981;
-    flex-basis: 50%;
-    text-align: center;
-    border-radius: 6px;
-    padding: 9px 15px;
-    min-height: 39px;
-}
-#pass-length-el{
-    border: none;
-    width: 100%;
+.pass-el,
+#pass-length-el {
+    background-color: var(--main-secondary);
     color: white;
+    border-radius: 6px;
+    text-align: center;
+    min-height: 45px;
+    outline-style: none;
+    border: none;
+    -moz-appearance: textfield; /* Прибираємо для Firefox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+
+/* Прибираємо стрілочки в Chrome, Safari, Edge, Opera */
+#pass-length-el::-webkit-outer-spin-button,
+#pass-length-el::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+/* Перемикач теми */
+
+#theme-switcher{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed;
+    top: 20px;
+    right: 20px; */
+}
+
+#theme-switcher svg{
+    fill: var(--background-app);
+}
+
+#theme-switcher svg:first-child{
+    display: none;
+}
+
+.light-theme  #theme-switcher svg:last-child{
+    display: none;
+}
+
+.light-theme  #theme-switcher svg:first-child{
+    display: block;
 }
