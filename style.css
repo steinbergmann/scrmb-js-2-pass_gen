@@ -6,8 +6,9 @@
     --text-secondary: #808080;
     --main-secondary: #2F3E53;
     --accent-color:  #10B981;
-    --accent-color-active: #096a4a;
+    /* --accent-color-active: #096a4a; */
     --accent-color-hover: #0f9266;
+    --accent-color-active: #9ad4c1;
 
 }
 
